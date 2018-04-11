@@ -41,7 +41,7 @@ bot.on("message", (message) => {
 	} 
 
     
-    elseif (message.content.startsWith(prefix + "help"))    {
+    else if (message.content.startsWith(prefix + "help"))    {
         message.delete();
         message.channel.send({embed: {
         color:  3447003,
