@@ -26,8 +26,22 @@ bot.on("message", (message) => {
     let sender = message.author; 
     let cont = message.content.slice(prefix.length).split(" ");
     let args = cont.slice(1);
+    
+    if (message.channel.type === "dm") 
+    {
+  		if (message.author === Client.user) 
+  		{
+  		
+  		} 
+  		else 
+  		{
+    		console.log("<Private>: " + message.author.username + ": " + message.content)
+    		message.channel.sendMessage("Je suis désactivée en message privés, dommage :wink:")
+  		}
+	} 
 
-    if (message.content.startsWith(prefix + "help"))    {
+    
+    elseif (message.content.startsWith(prefix + "help"))    {
         message.delete();
         message.channel.send({embed: {
         color:  3447003,
