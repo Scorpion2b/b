@@ -32,8 +32,6 @@ bot.on("message", (message) => {
 
 	const swearWords = badword();
 
-	var riendutout = 
-
 
 	const argus = message.content.slice(prefix.length).trim().split(/ +/g);
 	const command = argus.shift().toLowerCase();
