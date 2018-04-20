@@ -10,9 +10,7 @@ function badword_punition(juge){
 
   	var vérif = message.author.id;
 
-  	console.log('avant');
-
-  	console.log(juge);
+  	console.log(amende);
 
   	for (var i = 0; i < juge; i++) 
   	{
