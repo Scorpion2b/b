@@ -5,11 +5,12 @@ function badword() {
 
 function badword_punition(){
 
-	message.reply("Vous n'ête pas autorisé à dire ceci !");
+	message.reply('Vous n\'ête pas autorisé à dire ceci !');
   	message.delete();
 
   	var vérif = message.author.id;
-  	for(i=0 ; i < juge ; i++)
+
+  	for(i=0 ; i < juge; i++)
   	{
   		if (casier[i] === vérif) 
   		{
@@ -31,7 +32,6 @@ function badword_punition(){
 			message.reply('coucou tu va prendre cher !');
   			i = juge;
   		}
-  		else
-  		{}
+  		else{console.log(casier[i]);}
   	}
 }
