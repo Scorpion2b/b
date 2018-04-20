@@ -11,8 +11,9 @@ function badword_punition(juge){
   	var vérif = message.author.id;
 
   	console.log('avant');
-	console.log(juge);
-	
+
+  	console.log(juge);
+
   	for (var i = 0; i < juge; i++) 
   	{
 
@@ -26,8 +27,8 @@ function badword_punition(juge){
   		else
   		{	
   			console.log('dedans 3');
-  			juge++;
   			casier[juge] = vérif;
+  			juge++;
   			i = juge;
   		}
   	}
