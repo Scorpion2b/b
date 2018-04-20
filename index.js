@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
+var fs = require("fs"); 
+
+eval(fs.readFileSync('badword.js')+'');
 
 
 
@@ -18,10 +21,15 @@ temoin = 0;
 
 
 
+
+
 bot.on("message", (message) => {
 
-    const argus = message.content.slice(prefix.length).trim().split(/ +/g);
-    const command = argus.shift().toLowerCase();
+	const swearWords = badword();
+
+	const argus = message.content.slice(prefix.length).trim().split(/ +/g);
+	const command = argus.shift().toLowerCase();
+	var msg = message.content.toUpperCase();
     
     let sender = message.author; 
     let cont = message.content.slice(prefix.length).split(" ");
@@ -105,7 +113,14 @@ bot.on("message", (message) => {
             }
         }
     
-    
+
+
+
+// Mot interdit
+
+    else if( swearWords.some(word => msg.includes(word)) ) {
+  		badword_punition();
+  	}
     
     
 
@@ -140,12 +155,15 @@ bot.on("message", (message) => {
     }
     
     else if (message.content.startsWith("Messages Supprimés"))      {
-     setTimeout(nomdetafonction, 5000);
+     setTimeout('nomdetafonction', 5000);
      function nomdetafonction() {
     
     }
         message.delete();
     }
+
+    else if (true) {}
+
 
     });
 
