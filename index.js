@@ -10,11 +10,6 @@ bot.on("ready", () => {
 
 const prefix = "*";
 
-//tableau badwords
-
-var casier = new Array();
-var juge = 0;
-var amende = new Array();
 
 
 
@@ -24,6 +19,12 @@ var amende = new Array();
 
 bot.on("message", (message) => {
 
+	//tableau badwords
+
+	var casier = new Array();
+	var amende = new Array();
+
+	var juge = 0;
 
 	var fs = require("fs"); 
 
