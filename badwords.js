@@ -11,30 +11,4 @@ function badword_punition(){
   	var vérif = message.author.id;
 
   	console.log('avant');
-  	for (var i = 0; i < juge; i++) 
-  	{
-
-  		console.log('dedant');
-  		if (casier[i] === vérif) 
-  		{
-  			console.log('dedans 2');
-  			amende[i]++;
-  			i = juge;
-  		}
-  		else
-  		{	
-  			console.log('dedans 3');
-  			juge++;
-  			casier[juge] = vérif;
-  			i = juge;
-  		}
-  	}
-
-  	for (var i = 0; i < juge; i++) 
-  	{
-  		console.log('après');
-  		message.channel.send(casier[i]);
-  		message.channel.send(amende[i]);
-
-  	}
 }
