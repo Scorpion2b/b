@@ -1,10 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-var fs = require("fs"); 
-
-eval(fs.readFileSync('badwords.js')+'');
-
 
 
 bot.on("ready", () => {
@@ -24,6 +20,11 @@ temoin = 0;
 
 
 bot.on("message", (message) => {
+
+
+	var fs = require("fs"); 
+
+	eval(fs.readFileSync('badwords.js')+'');
 
 	const swearWords = badword();
 
