@@ -28,7 +28,7 @@ function badword_punition(){
   	{
   		if (amende[i] > 3) 
   		{
-			message.send('coucou tu va prendre cher !');
+			message.reply('coucou tu va prendre cher !');
   			i = juge;
   		}
   		else
