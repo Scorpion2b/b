@@ -16,17 +16,13 @@ function badword_punition(juge){
 
   	for (var i = 0; i < juge; i++) 
   	{
-
-  		console.log('dedant');
   		if (casier[i] === vérif) 
   		{
-  			console.log('dedans 2');
   			amende[i]++;
   			i = juge;
   		}
   		else
   		{	
-  			console.log('dedans 3');
   			casier[juge] = vérif;
   			juge++;
   			i = juge;
@@ -35,9 +31,14 @@ function badword_punition(juge){
 
   	for (var i = 0; i < juge; i++) 
   	{
-  		console.log('après');
-  		message.channel.send(casier[i]);
-  		message.channel.send(amende[i]);
+  		if (amende[i] > 3) 
+  		{
+  			message.reply('Vous avez été mute.');
 
+  			var myRole = message.guild.roles.find("name", "Muet").id; 
+  			const guildMember = message.member; 
+  			guildMember.addRole(myRole);
+
+  		}
   	}
 }
