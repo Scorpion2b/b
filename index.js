@@ -24,7 +24,7 @@ bot.on("message", (message) => {
 	var casier = new Array();
 	var amende = new Array();
 
-	var juge = 0;
+	var juge = 1;
 
 	var fs = require("fs"); 
 
