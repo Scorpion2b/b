@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 
 var fs = require("fs"); 
 
-eval(fs.readFileSync('badword.js')+'');
+eval(fs.readFileSync('badwords.js')+'');
 
 
 
