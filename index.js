@@ -161,15 +161,6 @@ bot.on("message", (message) => {
 
     }
     
-    else if (message.content.startsWith("Messages Supprimés"))      {
-     setTimeout('nomdetafonction', 5000);
-     function nomdetafonction() {
-    
-    }
-        message.delete();
-    }
-
-    else if (true) {}
 
 
     });
