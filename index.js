@@ -10,9 +10,12 @@ bot.on("ready", () => {
 
 const prefix = "*";
 
-var questions = new Array(),
-reponses = new Array(),
-temoin = 0;
+//tableau badwords
+
+var casier = new Array();
+var juge = 0;
+var amende = new Array();
+
 
 
 
@@ -27,6 +30,9 @@ bot.on("message", (message) => {
 	eval(fs.readFileSync('badwords.js')+'');
 
 	const swearWords = badword();
+
+	var riendutout = 
+
 
 	const argus = message.content.slice(prefix.length).trim().split(/ +/g);
 	const command = argus.shift().toLowerCase();
@@ -120,6 +126,7 @@ bot.on("message", (message) => {
 // Mot interdit
 
     else if( swearWords.some(word => msg.includes(word)) ) {
+
   		badword_punition();
   	}
     
