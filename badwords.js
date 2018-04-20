@@ -11,7 +11,9 @@ function badword_punition(){
   	var vérif = message.author.id;
 
   	console.log('avant');
-  	for(var i=0 ; i < juge; i++){
+  	for (var i = 0; i < juge; i++) 
+  	{
+
   		console.log('dedant');
   		if (casier[i] === vérif) 
   		{
@@ -28,7 +30,7 @@ function badword_punition(){
   		}
   	}
 
-  	for(var i=0 ; i < juge ; i++)
+  	for (var i = 0; i < juge; i++) 
   	{
   		console.log('après');
   		message.channel.send(casier[i]);
