@@ -13,7 +13,7 @@ const prefix = "*";
 
 
 bot.on("join",() => {
-	var dt = new Date();
+  var dt = new Date();
   var heure = dt.getHours();
   var minutes = dt.getMinutes();
   var timeday = "[" + heure + ":" + minutes + "] ";
