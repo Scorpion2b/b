@@ -12,7 +12,7 @@ const prefix = "*";
 
 
 
-bot.on("join",() => {
+bot.on("guildMemberAdd", member => {
   var dt = new Date();
   var heure = dt.getHours();
   var minutes = dt.getMinutes();
