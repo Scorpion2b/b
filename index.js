@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 
 
-
 bot.on("ready", () => {
     console.log("I am ready!");
     bot.user.setActivity('BDBot | *help');
@@ -13,6 +12,25 @@ const prefix = "*";
 
 
 
+bot.on("join",() => {
+	var dt = new Date();
+  var heure = dt.getHours();
+  var minutes = dt.getMinutes();
+  var timeday = "[" + heure + ":" + minutes + "] ";
+  let guild = member.guild;
+  console.log(timeday + "[Join Guild] " + member.user.username + " joined " + guild);
+
+  /* message de bienvenue */
+  member.send("Bienvenue sur **'Communauté -- BlackDard'** \n > N'oublie pas de bien prendre connaissence du salon #ｒｅｇｌｅｍｅｎｔ avant de faire une erreur ! \n > Les membres du staff ainsi que moi même sont la pour vous aider si jamais vous a des questions. :wink: \n")
+	
+  /* rank de la personne a son arriver */
+  if (guild.roles.exists("name", "Abonnés")) {
+    let joinRole = guild.roles.find('name', 'Abonnés');
+    member.edit({
+        roles: [joinRole]
+      })
+  }
+});
 
 
 
